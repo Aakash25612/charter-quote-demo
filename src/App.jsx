@@ -25,8 +25,9 @@ export default function App() {
     <AppProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={<Navigate to="/login" replace />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/welcome" element={<Landing />} />
           <Route path="/q/:token" element={<ClientQuote />} />
           <Route element={<Layout />}>
             <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
@@ -38,7 +39,7 @@ export default function App() {
             <Route path="/crew" element={<PrivateRoute><Crew /></PrivateRoute>} />
             <Route path="/settings" element={<PrivateRoute adminOnly><Settings /></PrivateRoute>} />
           </Route>
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>
       </BrowserRouter>
     </AppProvider>

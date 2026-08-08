@@ -25,7 +25,7 @@ export default function Login() {
   return (
     <div className="auth-page">
       <div className="auth-card">
-        <Link to="/" className="brand-inline" style={{ color: 'var(--teal)' }}>
+        <Link to="/welcome" className="brand-inline" style={{ color: 'var(--teal)' }}>
           <span className="brand-dot" style={{ background: 'var(--accent-soft)', color: 'var(--teal)' }}>
             <Plane size={18} />
           </span>
